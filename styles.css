@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Sprečava prikazivanje scroll bara */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#movingBall {
+    position: absolute; /* Omogućava slobodno pozicioniranje unutar kontejnera */
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    border-radius: 50%; /* Čini da izgleda kao loptica */
+    cursor: pointer;
+    transition: transform 0.5s ease, background-color 0.3s ease;
+    z-index: 1; /* Osigurava da loptica bude iznad pozadine */
+}
+
+#movingBall:hover {
+    background-color: #0056b3;
+}
+
+#clickCount {
+    font-size: 18px;
+    color: #333;
+    position: fixed; /* Fiksira poruke na dnu stranice */
+    bottom: 50px; /* Udaljenost od donjeg ruba stranice */
+    left: 50%;
+    transform: translateX(-50%); /* Centriranje poruke */
+    z-index: 1; /* Osigurava da poruke budu iznad loptice */
+}
+
+#message {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    position: fixed; /* Fiksira poruke na dnu stranice */
+    bottom: 10px; /* Udaljenost od donjeg ruba stranice */
+    left: 50%;
+    transform: translateX(-50%); /* Centriranje poruke */
+    z-index: 1; /* Osigurava da poruke budu iznad loptice */
+}
